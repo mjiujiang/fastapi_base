@@ -9,6 +9,7 @@ from app.database.database import engine
 models.Base.metadata.create_all(bind=engine)
 
 
+# 创建app
 def create_app():
     fast_app = FastAPI(debug=True)
     fast_app.include_router(api_user.router)
